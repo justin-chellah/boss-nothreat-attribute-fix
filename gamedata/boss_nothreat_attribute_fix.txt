@@ -1,0 +1,69 @@
+"Games"
+{
+    "left4dead"
+    {
+        "Offsets"
+        {
+            "TerrorNavArea::m_spawnAttributeFlags"
+            {
+                "windows"   "300"
+                "linux"     "304"
+            }
+        }
+
+        "Signatures"
+        {
+            "TerrorNavArea::IsValidForWanderingPopulation"
+            {
+                "library"   "server"
+                "windows"   "\x56\x8B\xF1\xF6\x46\x54\x03"
+                // 56 8B F1 F6 46 54 03
+
+                "linux"     "@_ZNK13TerrorNavArea29IsValidForWanderingPopulationEv"
+            }
+
+            "UpdateVersusBossSpawning"
+            {
+                "library"   "server"
+                "windows"   "\x83\xEC\x38\x57\x8B\xF9\xE8\x2A\x2A\x2A\x2A\x84\xC0"
+                // 83 EC 38 57 8B F9 E8 ? ? ? ? 84 C0
+
+                "linux"     "@_ZN8Director24UpdateVersusBossSpawningEv"
+            }
+        }
+    }
+
+    "left4dead2"
+    {
+        "Offsets"
+        {
+            // Search for string "Terror Spawn Attribute Flags"
+            "TerrorNavArea::m_spawnAttributeFlags"
+            {
+                "windows"   "296"
+                "linux"     "300"
+            }
+        }
+    
+        "Signatures"
+        {
+            "TerrorNavArea::IsValidForWanderingPopulation"
+            {
+                "library"   "server"
+                "windows"   "\x56\x8B\xF1\xF6\x46\x54\x03"
+                // 56 8B F1 F6 46 54 03
+
+                "linux"     "@_ZNK13TerrorNavArea29IsValidForWanderingPopulationEv"
+            }
+
+            "UpdateVersusBossSpawning"
+            {
+                "library"   "server"
+                "windows"   "\x55\x8B\xEC\x83\xEC\x44\x57\x8B\xF9\x8B\x0D\x2A\x2A\x2A\x2A"
+                // 55 8B EC 83 EC 44 57 8B F9 8B 0D ? ? ? ?
+
+                "linux"     "@_ZN19CDirectorVersusMode24UpdateVersusBossSpawningEv"
+            }
+        }
+    }
+}
